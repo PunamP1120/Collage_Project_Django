@@ -1,0 +1,8 @@
+<h2>All Collages</h2>
+<ul>
+    {% for collage in collages %}
+        <li>
+            <a href="{% url 'display_collage' collage.id %}">{{ collage.title }}</a> - {{ collage.created_at }}
+        </li>
+    {% endfor %}
+</ul>
